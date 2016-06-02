@@ -2,10 +2,11 @@
   "name": "react-tinymce",
   "version": "0.5.1",
   "description": "React TinyMCE component",
-  "main": "lib/main.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "node_modules/.bin/rackt test --single-run --browsers Firefox",
-    "start": "node_modules/.bin/rackt server"
+    "start": "node_modules/.bin/rackt server",
+    "build": "node_modules/.bin/babel --presets es2015,react -d dist/ lib/"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,16 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
     "rackt-cli": "^0.5.3",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
   },
   "dependencies": {
-    "lodash": "^3.9.3"
+    "lodash": "^4.13.1"
   }
 }
